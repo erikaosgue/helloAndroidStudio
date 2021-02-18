@@ -1,4 +1,4 @@
-package com.erikaosgue.helloandroidstudio.ObjectOrientedProgrammin
+package com.erikaosgue.helloandroidstudio.ObjectOrientedProgramming
 
 class Person {
 

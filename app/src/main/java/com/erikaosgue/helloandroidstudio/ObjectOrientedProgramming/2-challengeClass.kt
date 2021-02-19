@@ -1,4 +1,4 @@
-package com.erikaosgue.helloandroidstudio.ObjectOrientedProgrammig
+package com.erikaosgue.helloandroidstudio.ObjectOrientedProgramming
 
 
 /*
@@ -11,16 +11,21 @@ to print itself to the command line, including its title, author, and
 publication year.
 */
 
-class Books(val title: String, val author: String, val publishYear: Int, var borrow: Boolean) {
+class Book(val title: String, val author: String, val publishYear: Int, var borrow: Boolean) {
     init {
 
     }
 
-    fun printBook() {
-        println("Title: $this.title, Author: $this.author, Publication Year: $this.publishYear, Is Borrowed: $this.borrow")
+    fun info() {
+        println("Title: ${this.title}\nAuthor: ${this.author}\nPublication Year: ${this.publishYear}\nIs Borrowed: ${this.borrow}")
     }
 
 
+}
+
+fun main() {
+    var book = Book("100 años de Soledad", "Gabriel García Márquez", 1967, true)
+    book.info()
 }
 
 

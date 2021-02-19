@@ -1,5 +1,7 @@
 package com.erikaosgue.helloandroidstudio.ObjectOrientedProgrammig
 
+
+// declaring the parameters as variables(var) or values(val) will behave as a constructor
 class Person(val name: String, var age: Int) {
 
     /*

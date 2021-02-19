@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         // sentenciaWhen()
 
         //Leccion 3
-        // arrays()
+        arrays()
 
         // Leccion 4
         //maps()
@@ -130,6 +130,28 @@ class MainActivity : AppCompatActivity() {
         println(myArray.sort())
 
         myArray.clear()
+
+
+
+        val array = arrayOf("Texas", "Illinois", "Iowa", "California")
+        val list = listOf("Udemy", 10, 3.5) // Mix of datatype val arrayList = arrayListof("Erika", "Michael", "Sarah")
+        val arrayList  = arrayListOf<String>("Erika", "Michael", "Sarah")
+        val mutableList  = mutableListOf<String>("Erika", "Michael", "Sarah")
+
+        println("array: $array") //array: [Ljava.lang.String;@3c3d9b6
+        array.forEach(::println)
+        //Texas
+        //Illinois
+        //Iowa
+        //California
+        println("list: $list") //list: [Udemy, 10, 3.5]
+        println("arrayList: $arrayList") // arrayList: [Erika, Michael, Sarah]
+        println("mutableList: $mutableList") //mutableList: [Erika, Michael, Sarah]
+
+
+
+
+
     }
 
     //Maps And Dictionaries

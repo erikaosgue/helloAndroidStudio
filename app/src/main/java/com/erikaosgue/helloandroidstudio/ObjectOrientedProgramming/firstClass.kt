@@ -1,6 +1,6 @@
 package com.erikaosgue.helloandroidstudio.ObjectOrientedProgramming
 
-class Person {
+class Person(s: String, i: Int) {
 
     //Creating Properties
     var name: String = "Josh"
@@ -22,7 +22,7 @@ class Person {
 }
 
 fun main() {
-    val person = Person()
+    val person = Person("Erika", 26)
     println(person.name)
     println(person.age)
 

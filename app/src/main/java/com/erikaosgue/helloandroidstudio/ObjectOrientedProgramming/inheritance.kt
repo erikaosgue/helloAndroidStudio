@@ -1,5 +1,8 @@
 package com.erikaosgue.helloandroidstudio.ObjectOrientedProgramming
 
+
+/* Lesson 38. Open classes and Inheritance */
+
 // Open allow the inheritance.
 open class Person1(open val name: String, open var age: Int) {
 

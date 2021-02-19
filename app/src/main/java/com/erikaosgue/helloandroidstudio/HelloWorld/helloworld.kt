@@ -23,6 +23,12 @@ fun main(args: Array<String>){
     // Concatenation of arrays
     val states2 = arrayOf("Idaho", "florida")
     val allStates = states1 + states2
+    println("==> ${allStates}")
+    // Double colon is a reference to a function or to class
+    // What really means?
+    allStates.forEach(::println)
+    println(allStates.map(String::length))
+
 
     //Get the size of the array
     val size = allStates.size

@@ -10,6 +10,7 @@ open class Person1(open val name: String, open var age: Int) {
         println("\n=== Object Created! ===\n")
     }
 
+
     fun speak() {
         println("Hello I am ${this.name} and You?")
     }

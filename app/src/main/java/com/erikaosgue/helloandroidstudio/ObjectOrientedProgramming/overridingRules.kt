@@ -16,7 +16,11 @@ interface Learnable {
 
 open class KotlinCourse(): Course("Kotlin", 999.99), Learnable{
     final override fun learn() {
-        println(" I'm one of the first people to learn Kotlin")
+
+        // Specify what method to use when having ambiguity
+        super<Course>.learn()
+        super<Learnable>.learn()
+        println("I'm one of the first people to learn Kotlin")
     }
 
 }

@@ -36,7 +36,7 @@ abstract class InventoryItem(val title: String,
         // If the current item is not borrowed
         // then I can borrow it
         if (!borrowed) {
-            borrowed = true
+            this.borrowed = true // How this is works, with this and without
             println("*** Borrowing... Item title=$title")
         }
         else {
@@ -67,9 +67,11 @@ abstract class InventoryItem(val title: String,
 class BookLib(title: String,
             genre: String,
             publicationYear: Int,
-            val author: String): InventoryItem(title, genre, publicationYear, false){
+            val author: String): InventoryItem(title, genre,publicationYear, false){
 
 }
+
+
 
 class DvDLib(title: String,
           genre: String,
@@ -83,7 +85,7 @@ fun main(args: Array<String>) {
     println("=== Books ====\n")
 
     val book = BookLib("100 años de Soledad", "novel", 1967, "Gabriel Garcia Marquez")
-    println(book)
+    println("Book1 = $book")
     println("Is the book Borrow? => ${book.borrowed}")
 
     // Borrow a Book
@@ -91,6 +93,9 @@ fun main(args: Array<String>) {
     println("Is the book Borrow? => ${book.borrowed}")
     book.returned()
 
+    val book2 = BookLib("The book Thief", "novel", 2005, "Markus Zusak")
+    println("Book2 : $book2")
+    println("Is the book2 Borrow? ${book2.borrowed}")
 
     println("\n=== DvDs ====\n")
 

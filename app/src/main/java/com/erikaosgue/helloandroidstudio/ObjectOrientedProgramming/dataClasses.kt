@@ -56,7 +56,9 @@ fun main(args: Array<String>) {
 
     // Comparing if the objects are the same:
 
-    //This will return false, this method doesn;t work for normal classes
-    println(book.equals(book2))
-    println(databook.equals(databook2))
+    //This will return false, this method doesn't work for normal classes
+    println("Is book.equal(book2): ${book.equals(book2)}")
+
+    //this will return true, this methods is useful for data-object for comparing when they have the same properties
+    println("Is databook.equals(databook2):  ${databook.equals(databook2)}")
 }

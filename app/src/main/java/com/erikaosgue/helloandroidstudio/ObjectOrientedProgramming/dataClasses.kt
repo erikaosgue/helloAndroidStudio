@@ -1,6 +1,8 @@
 package com.erikaosgue.helloandroidstudio.ObjectOrientedProgramming
 
 //Lesson 43. Data Classes
+
+
 class Book1(val title: String, val author:String, val publicationYear: Int, var price: Double) {
 
     // This method is hidden in all classes, we can override it to display the information of the object
@@ -9,6 +11,12 @@ class Book1(val title: String, val author:String, val publicationYear: Int, var 
         return "Book[title=$title, author=$author, publicationYear=$publicationYear, price=$price]"
     }
 }
+
+/* Usefull for:
+* Decompose the object properties in individuals
+* toString() // Give a representation of the object using just println()
+* equals()
+ */
 data class DataBook(val title: String, val author: String, val publicationYear: Int, var price: Double) {
 
 }
@@ -46,5 +54,9 @@ fun main(args: Array<String>) {
     println(databook)//output: DataBook(title=Diario de Ana Frank, author=Ana Frank, publicationYear=1947, price=100.0)
 
 
+    // Comparing if the objects are the same:
 
+    //This will return false, this method doesn;t work for normal classes
+    println(book.equals(book2))
+    println(databook.equals(databook2))
 }

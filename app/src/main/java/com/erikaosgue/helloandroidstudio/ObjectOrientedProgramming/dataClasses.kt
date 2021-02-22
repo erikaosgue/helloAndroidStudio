@@ -12,11 +12,14 @@ class Book1(val title: String, val author:String, val publicationYear: Int, var 
     }
 }
 
-/* Usefull for:
-* Decompose the object properties in individuals
+/* data Classes can be Useful for:
+
+* Decompose the object properties in individuals variables
 * toString() // Give a representation of the object using just println()
-* equals()
+* equals() compare is the objects are the same or equal
+* copy() copies the object into another one
  */
+
 data class DataBook(val title: String, val author: String, val publicationYear: Int, var price: Double) {
 
 }

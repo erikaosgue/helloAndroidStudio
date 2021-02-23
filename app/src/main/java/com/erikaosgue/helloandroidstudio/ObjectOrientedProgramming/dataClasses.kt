@@ -7,10 +7,16 @@ class Book1(val title: String, val author:String, val publicationYear: Int, var 
 
     // This method is hidden in all classes, we can override it to display the information of the object
     // in the way we want for example:
+    // Kotlin have open fun toString() by default
     override fun toString(): String {
         return "Book[title=$title, author=$author, publicationYear=$publicationYear, price=$price]"
     }
 }
+
+
+// DATA CLASSES are useful to store data
+//Example from an API we receive data as Json an
+//We can save that data into data clases
 
 /* data Classes can be Useful for:
 

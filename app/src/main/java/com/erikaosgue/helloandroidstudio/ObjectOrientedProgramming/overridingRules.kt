@@ -1,20 +1,22 @@
 package com.erikaosgue.helloandroidstudio.ObjectOrientedProgramming
 
-abstract class  Course(val topic: String, val price: Double) {
+abstract class Course(val topic: String, val price: Double) {
+
     open fun learn() {
         println("Learning a $topic course")
     }
 }
 
 interface Learnable {
+
     fun learn() {
         println("Learning...")
     }
 }
 
 
-
 open class KotlinCourse(): Course("Kotlin", 999.99), Learnable{
+
     final override fun learn() {
 
         // Specify what method to use when having ambiguity
@@ -25,17 +27,22 @@ open class KotlinCourse(): Course("Kotlin", 999.99), Learnable{
 
 }
 
-//The <final> keyword help the method to be change in one child class
+//The <final> keyword help the method to not be change in one child class
+//for example the follow exercise will show an error, so we can't do this
+
 // Like this SpecialKotlinClass
-/*class SpecialKotlinClass(): KotlinCourse() {
-    override fun learn() {
-       println("Learning special Kotlin Course")
-    }
-}*/
+class SpecialKotlinClass(): KotlinCourse() {
+//    override fun learn() {
+//       println("Learning special Kotlin Course")
+//    }
+}
 
 
 
 fun main(args: Array<String>) {
     val course = KotlinCourse()
     course.learn()
+
+    val childCourse = SpecialKotlinClass()
+    childCourse.learn()
 }

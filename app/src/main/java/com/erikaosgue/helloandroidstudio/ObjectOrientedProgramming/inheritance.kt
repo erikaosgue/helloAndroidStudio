@@ -4,9 +4,11 @@ package com.erikaosgue.helloandroidstudio.ObjectOrientedProgramming
 /* Lesson 38. Open classes and Inheritance */
 
 // Open allow the inheritance.
-open class Person1(open val name: String, open var age: Int) {
+open class Person1(val index: Int, open val name: String, open var age: Int) {
 
     init {
+    //  this.index = index
+    //  this.name = name
         println("\n=== Object Created! ===\n")
     }
 
@@ -27,12 +29,12 @@ open class Person1(open val name: String, open var age: Int) {
 // for a class Student to be able to override a property, is necessary to have [open] properties from the class
 // that is inheriting from. In this case from class Person1
 
-class Student(override val name: String, override var age: Int): Person1(name, age) {
+class Student(override val name: String, override var age: Int): Person1(index=12, name, age) {
 
     fun isIntelligent() = true
 }
 
-class Employee(override val name: String, override var age: Int): Person1(name, age) {
+class Employee(override val name: String, override var age: Int): Person1(4, name, age) {
 
     fun getPayment() {
         println("the employee got the payment!")
@@ -49,6 +51,8 @@ fun main(args: Array<String>) {
     var employee = Employee("Rosalba", 50)
     employee.greet()
     employee.getPayment()
+
+    println(employee.index)
 
 }
 

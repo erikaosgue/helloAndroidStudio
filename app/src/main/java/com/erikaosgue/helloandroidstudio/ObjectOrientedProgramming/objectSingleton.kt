@@ -6,6 +6,7 @@ package com.erikaosgue.helloandroidstudio.ObjectOrientedProgramming
 //object will be just one instance of the class
 
 object Cache {
+
     const val name = "HyperCahe"
 
     fun retrieveDate():Int {

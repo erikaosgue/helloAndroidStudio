@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         // sentenciaWhen()
 
         //Leccion 3
-        arrays()
+        //arrays()
 
         // Leccion 4
         //maps()
@@ -25,10 +25,10 @@ class MainActivity : AppCompatActivity() {
         //loops()
 
         //Leccion 6
-        //nullSafety()
+        nullSafety()
 
         //Leccion 7
-        whenChallenge()
+        //whenChallenge()
     }
 
     private fun variablesYConstantes() {
@@ -224,9 +224,19 @@ class MainActivity : AppCompatActivity() {
 
 
         var myNullString: String? = "Erika Osorio"
+        // myNullString.length // Android Will show red error
         println(myNullString)
         myNullString = null
         println(myNullString)
+
+        //Kotlin Will help us here, and will return null
+        // and save us from a null pointer exception
+        //this is call a "safe call"
+        println("This is a safe call ${myNullString?.length}")
+
+        //this will cause a null Pointer Execption, Because I am
+        //telling kotlin I am 100% sure this is not null
+        /*println("This is not a safe call ${myNullString!!}") */
 
 
     }

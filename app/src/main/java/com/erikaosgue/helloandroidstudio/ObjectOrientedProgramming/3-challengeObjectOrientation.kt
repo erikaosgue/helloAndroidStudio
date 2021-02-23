@@ -4,8 +4,8 @@ package com.erikaosgue.helloandroidstudio.ObjectOrientedProgramming
 Let’s say we’re running a library where you can lend books and also some
 movies.
 We want to write an application to keep track of our inventory.
-Create an interface Lendable that defines a borrow() method. Then create an
-abstract class InventoryItem and two classes Book and DVD which inherit from
+Create an interface Lendable that defines a borrow() method.
+Then create an abstract class InventoryItem and two classes Book and DVD which inherit from
 InventoryItem. InventoryItem should implement the Lendable interface.
 Books and DVDs both have a title, genre and publication year. Books also have
 an author whereas DVDs have a length in seconds. Add each property to the
@@ -20,9 +20,11 @@ DvDs:
 
 interface Lendable {
 
-    fun borrow() {
+    fun borrow(): Boolean {
+        return false
     }
-    fun returned() {
+    fun returned(): Boolean {
+        return false
 
     }
 }
@@ -32,26 +34,34 @@ abstract class InventoryItem(val title: String,
                              var publicationYear: Int,
                              var borrowed: Boolean): Lendable {
 
-    override fun borrow() {
+
+    //object movie.borrowed = false
+    // this.borrowed = true
+
+    override fun borrow(): Boolean {
         // If the current item is not borrowed
         // then I can borrow it
         if (!borrowed) {
-            this.borrowed = true // How this is works, with this and without
+            borrowed = true // How this is works, with this and without
             println("*** Borrowing... Item title=$title")
+            return true
         }
         else {
             println("Item is already Borrowed")
+            return false
         }
 
     }
 
-    override fun returned() {
+    override fun returned(): Boolean {
        if (borrowed) {
            borrowed = false
            println("*** Returning... Item title=$title...\nThanks for returning the Item\n")
+           return true
        }
         else {
             println("You can't return an Item that hasn't been borrowed")
+           return false
        }
     }
 
@@ -96,6 +106,10 @@ fun main(args: Array<String>) {
     val book2 = BookLib("The book Thief", "novel", 2005, "Markus Zusak")
     println("Book2 : $book2")
     println("Is the book2 Borrow? ${book2.borrowed}")
+    book2.borrow()
+    println("Is the book Borrow? => ${book2.borrowed}")
+    book2.returned()
+
 
     println("\n=== DvDs ====\n")
 

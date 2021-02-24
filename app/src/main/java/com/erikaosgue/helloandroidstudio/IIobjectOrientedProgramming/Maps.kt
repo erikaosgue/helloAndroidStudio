@@ -1,6 +1,6 @@
 package com.erikaosgue.helloandroidstudio.IIobjectOrientedProgramming
 
-fun main() {
+fun main(args: Array<String>) {
 
     /********** Immutable Maps *************/
 

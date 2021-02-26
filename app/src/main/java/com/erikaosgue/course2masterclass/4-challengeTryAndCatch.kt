@@ -22,6 +22,7 @@ fun main(args: Array<String>) {
         e.printStackTrace()
         e.localizedMessage
     }finally {
+        println("Transaction completed!")
 
     }
 

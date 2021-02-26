@@ -29,6 +29,8 @@ fun main() {
          guess = input.toInt()
 
       }
+
+
       println(guess)
 
       if (guess < number) {

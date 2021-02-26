@@ -12,6 +12,7 @@ fun main(args: Array<String>) {
         /*
         // ONE way to do it
         if (mapsOfIPs.containsKey(it)) {
+        // This way we have to use especial Arithmetic Operator for NUll val
             mapsOfIPs[it] = mapsOfIPs[it]!!.plus(1)
         }else {
             mapsOfIPs[it] = 1

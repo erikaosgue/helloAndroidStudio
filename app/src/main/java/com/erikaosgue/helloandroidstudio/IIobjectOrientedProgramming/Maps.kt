@@ -49,7 +49,6 @@ fun main(args: Array<String>) {
     println(countryToInhabitants.containsKey("Australia"))
     println(countryToInhabitants.containsValue(20_000_000))
 
-
     // GET the value by the KET
     println(countryToInhabitants.get("Germany"))
     println(countryToInhabitants["Germany"])

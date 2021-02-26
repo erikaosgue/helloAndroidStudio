@@ -12,9 +12,9 @@ Print the length of that string to the console.
 fun main() {
 
     print("Please enter a number: ")
-    var input :Double? = readLine()?.toDouble()?:0.0
+    var number :Double? = readLine()?.toDouble()?.times(7)
 
-    println("The length of the String times 7 is: ${input?.times(7)?.toString()}")
+    println("The length of the $number times 7 is: ${number?.toString()?.length}")
 
 
 }

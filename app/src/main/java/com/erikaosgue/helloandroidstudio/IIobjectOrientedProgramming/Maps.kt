@@ -10,6 +10,7 @@ fun main(args: Array<String>) {
     // Creating a immutable Map using TO
     val namesToAges2 = mapOf("Josh" to 21, "Merry" to 33 )
 
+    println(namesToAges)
 
     /*********** Map Functions ************/
 

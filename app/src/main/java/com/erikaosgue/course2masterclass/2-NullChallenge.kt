@@ -26,5 +26,5 @@ fun main() {
     /**** Null assertion ****/
 
     val nullAsertion :String? = null
-    println("This is a Null Asertion ${nullAsertion!!.length}") // 14
+//    println("This is a Null Asertion ${nullAsertion!!.length}") // 14
 }

@@ -15,6 +15,14 @@ fun main() {
     val immutableNumbers = setOf(3, 4, null, 83, null)
     println(immutableNumbers)
 
+    /* properties we can use with set */
+    println("immutableNumbers.size = ${immutableNumbers.size}")
+    println("immutableNumbers.contains(3) = ${immutableNumbers.contains(3)}")
+
+    val newNumbers1 = setOf(1, 2, 3)
+    println("immutableNumbers.contains(newNumbers1) = ${immutableNumbers.containsAll(newNumbers1)}")
+
+    println("newNumbers Set is empty? = ${newNumbers1.isEmpty()}")
 
     /*************** hashSetOf MUTABLE***********/
 
@@ -25,7 +33,6 @@ fun main() {
     // Add element to en empty Set
     emptyMutableSet.add("Erika")
 
-
     /** Declare and assign elements to a set **/
     val mutableNumbers = hashSetOf(3, 4,null, 83, null)
     println("Declare and assign numbers to a Set: $mutableNumbers")
@@ -33,8 +40,8 @@ fun main() {
     // Add elements to the set
     mutableNumbers.add(44)
 
-    val newNumbers = setOf(1, 2, 3)
-    mutableNumbers.addAll(newNumbers)
+    val newNumbers2 = setOf(1, 2, 3)
+    mutableNumbers.addAll(newNumbers2)
     println(mutableNumbers)
 
     // Remove one element
@@ -45,5 +52,12 @@ fun main() {
     val toRemove = setOf(3, 4)
     mutableNumbers.removeAll(toRemove)
     println("Remove all elements of the Set $mutableNumbers")
+
+    /** other functions
+     * hashSetVar.retainAll(Collection)
+     * hashSetVar.clear()
+     *
+     */
+
 
 }

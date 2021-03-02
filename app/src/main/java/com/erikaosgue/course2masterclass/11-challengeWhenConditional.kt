@@ -19,4 +19,21 @@ fun main() {
         else -> println("Hi")
     }
 
+
+    // Returning a value from a When Statement
+
+    print("Enter the current hour (0-23): ")
+    var input = readLine()?:"0"
+    var hour = input.toInt()
+
+    if (hour > 23) hour = 23
+    val timeOfDay = when(hour) {
+        in 6..11 -> "Morning"
+        in 12..14 -> "Noon"
+        in 15..17 -> "Afternoon"
+        in 18..21 -> "evening"
+        else -> "night"
+    }
+    println("At $hour:00 it's  $timeOfDay")
+
 }

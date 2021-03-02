@@ -25,6 +25,7 @@ fun main() {
                 0 -> print("\uD83D\uDE00\t")
                 1 -> print("\uD83E\uDD28\t")
                 2 -> print("\uD83D\uDE31\t")
+                3 -> print("\uD83E\uDD23\t")
             }
         }
         println()

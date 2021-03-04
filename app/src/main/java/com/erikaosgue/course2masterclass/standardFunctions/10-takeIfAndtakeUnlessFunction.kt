@@ -18,9 +18,9 @@ fun main() {
 
         val number: Int = Random.nextInt(100)
         // {it%2==0} Return the add number, or null if it is even
-        val evenOrNull: Int? = number.takeUnless{it % 2 == 0}
+        val oddOrNull: Int? = number.takeUnless{it % 2 == 0}
         println("The number is $number")
-        println("The add number is $evenOrNull")
+        println("The odd number is $oddOrNull")
     }
 }
 

@@ -14,7 +14,8 @@ fun main(args: Array<String>) {
     */
 
     /**** Option 3 Declaring both parameters wothin the call of the function******/
-    sayHello(arrayListOf("Alica", "Dani", "Erika")) {name: String -> println("Hello there $name")}
+    sayHello(arrayListOf("Alica", "Dani", "Erika"))
+        {name: String -> println("Hello there $name")}
 }
 
 fun sayHello(names: ArrayList<String>, myLambdaFun: (String) -> Unit) {

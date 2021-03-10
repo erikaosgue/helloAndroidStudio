@@ -5,11 +5,13 @@ fun main() {
 
     println("====== Car Object =======\n")
     // here we instantiate an Object and call functions or update some values
-    with(Car()) {
+     with(Car()) {
         speed = 80
         drive()
         println("Car is driving")
+         println(this)
     }
+
 
 
     // Initializing the Object
